@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <meta
+      name="keywords"
+      content="Mustafa Arda Düşova, mdusova, Yazılım, Grafik Tasarım, E-Ticaret & Pazarlama, mdusova.com, Mustafa Arda,"
+    />
+
+    <meta
+      name="description"
+      content="Ben Mustafa Arda Düşova, bilgisayarla büyüdüm. Yazılım, grafik tasarım ve e-ticaret alanlarına derin bir tutku geliştirdim. Kullanıcı dostu yazılımlar ve etkileyici tasarımlar oluşturarak markaların dijital dünyada öne çıkmalarına yardımcı oluyorum. E-ticaret platformları geliştiriyor ve dijital pazarlama stratejileri oluşturuyorum. Her projede teknik ve yaratıcı çözümler sunarak markaların büyümesine katkıda bulunuyorum."
+    />
+
+    <meta property="og:url" content="https://duyminh.tech/" />
+
+    <meta property="og:title" content="Mustafa Arda Düşova - Frontend Developer" />
+
+    <meta
+      property="og:image"
+      content="https://i.pinimg.com/564x/73/0b/3c/730b3ccfda8d72661cf5efb066ef688c.jpg"
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:site_name" content="Mustafa Arda Düşova" />
+
+    <meta
+      property="og:description"
+      content="Ben Mustafa Arda Düşova, bilgisayarla büyüdüm. Yazılım, grafik tasarım ve e-ticaret alanlarına derin bir tutku geliştirdim. Kullanıcı dostu yazılımlar ve etkileyici tasarımlar oluşturarak markaların dijital dünyada öne çıkmalarına yardımcı oluyorum. E-ticaret platformları geliştiriyor ve dijital pazarlama stratejileri oluşturuyorum. Her projede teknik ve yaratıcı çözümler sunarak markaların büyümesine katkıda bulunuyorum."
+    />
+
+    <meta property="og:locale" content="tr_TR" />
+
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="dosyalar/resimler/favicon.webp"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="dosyalar/css/styles.css" />
+    <link rel="stylesheet" href="dosyalar/css/mediaqueries.css" />
+
+    <title>Mustafa Arda Düşova</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-JZPHEF7YXK"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-JZPHEF7YXK");
+    </script>
+
+    <!-- CAPTCHA GOOGLE -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function enableBtn(token) {
+        if (token) {
+          document.querySelector("#iletisim-button").disabled = false;
+        }
+      }
+
+      function reVerify() {
+        grecaptcha.reset();
+        document.querySelector("#iletisim-button").disabled = true;
+      }
+
+      function tokenExpired() {
+        document.querySelector("#iletisim-button").disabled = true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-circle">MA</span>
+          <span class="nav__logo-name">Mustafa Arda Düşova</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <span class="nav__title">Menü</span>
+
+          <h3 class="nav__name">Mustafa Arda Düşova</h3>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#anasayfa" class="nav__link">Anasayfa</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#hakkimda" class="nav__link">Hakkımda</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#projelerim" class="nav__link">Projelerim</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#iletisim" class="nav__link">İletişim</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="./dosyalar/cv/mdusovaCV.pdf" target="_blank" class="nav__link nav__link-button">
+                <i class="ri-download-2-line"></i> CV Görüntüle
+              </a>
+            </li>
+          </ul>
+          <!-- KAPATMA BUTONU -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__buttons">
+          <!-- TEMA BUTONU -->
+          <i class="change-theme" id="theme-button"></i>
+          <!-- DEĞİŞEN BUTON -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-4-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== HTML ANA BÖLÜM ====================-->
+    <main class="main">
+      <!--==================== GİRİŞ BÖLÜMÜ ====================-->
+      <section class="anasayfa section" id="anasayfa">
+        <div class="anasayfa__container container grid">
+          <h1 class="anasayfa__name">Mustafa A. Düşova</h1>
+
+          <div class="anasayfa__perfil">
+            <div class="anasayfa__image">
+              <img src="./dosyalar/resimler/girisfotografi.webp" alt="Mustafa Arda Düşova" class="anasayfa__img"/>
+              <div class="anasayfa__shadow"></div>
+
+              <img src="./dosyalar/resimler/kavisliok.svg" alt="kavisliok" class="anasayfa__arrow"/>
+              <img src="./dosyalar/resimler/rastgelecizgiler.svg" alt="rastgelecizgiler" class="anasayfa__line"/>
+
+              <div class="geometric-box"></div>
+            </div>
+
+            <div class="anasayfa__social">
+              <a href="https://www.instagram.com/mdusova/" target="_blank" class="anasayfa__social-link">
+                <i class="ri-instagram-line"></i>
+              </a>
+
+              <a href="https://open.spotify.com/user/31e4wu2ua42rf5qvqaukgjwgz7tu" target="_blank" class="anasayfa__social-link">
+                <i class="ri-spotify-line"></i>
+              </a>
+
+              <a href="https://github.com/madtethys" target="_blank" class="anasayfa__social-link">
+                <i class="ri-github-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="anasayfa__info">
+            <p class="anasayfa__description">
+              Ben, Mustafa Arda Düşova <br><b> Grafik Tasarım</b>,<br><b>Yazılım Geliştirme</b>, <br><b>E-Ticaret ve Pazarlama</b><br> üzerinde çalışmalar yapıyorum.
+            </p>
+
+            <a href="#hakkimda" class="anasayfa__scroll">
+              <div class="anasayfa__scroll-box">
+                <i class="ri-arrow-down-s-line"></i>
+              </div>
+
+              <span class="anasayfa__scroll-text">Aşağıya Kaydır</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== HAKKIMDA BÖLÜMÜ ====================-->
+      <section class="hakkimda section" id="hakkimda">
+        <div class="hakkimda__container container grid">
+          <h2 class="section__title-1">Hakkımda</h2>
+
+          <div class="hakkimda__perfil">
+            <div class="hakkimda__image">
+              <img src="./dosyalar/resimler/hakkimdafotografi.webp" alt="Mustafa Arda Düşova" class="hakkimda__img"/>
+              <div class="hakkimda__shadow"></div>
+
+              <div class="geometric-box"></div>
+              <img src="./dosyalar/resimler/rastgelecizgiler.svg" alt="rastgelecizgiler" class="hakkimda__line"/>
+              <div class="hakkimda__box"></div>
+            </div>
+          </div>
+
+          <div class="hakkimda__info">
+            <p class="hakkimda__description">
+              Ben Mustafa Arda Düşova, bilgisayarla büyüdüm. <br><b>Yazılım</b>, <b>grafik tasarım</b> ve <b>e-ticaret</b> alanlarına derin bir tutku geliştirdim. Kullanıcı dostu yazılımlar ve etkileyici tasarımlar oluşturarak markaların dijital dünyada öne çıkmalarına yardımcı oluyorum. E-ticaret platformları geliştiriyor ve dijital pazarlama stratejileri oluşturuyorum. Her projede teknik ve yaratıcı çözümler sunarak markaların büyümesine katkıda bulunuyorum.
+            </p>
+
+            <ul class="hakkimda__list">
+              <li class="hakkimda__item">
+                <b>Yeteneklerim:</b> HTML, CSS, JavaScript, React, Git &
+                GitHub, Photoshop, Illustrator, Shopify, WooCommerce, Opencart vb.
+              </li>
+            </ul>
+
+            <div class="hakkimda__buttons">
+              <a href="./dosyalar/cv/mdusovaCV.pdf" target="_blank" class="button">
+                <i class="ri-download-2-line"></i> CV'mi Görüntüle
+              </a>
+
+              <a href="#iletisim" class="button__ghost">
+                <i class="ri-send-plane-line"></i>
+                <span class="button__ghost-title">Benimle İletişime Geç</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== DENEYİMLERİM BÖLÜMÜ ====================-->
+      <section class="deneyimlerim section" id="deneyimlerim">
+        <h2 class="section__title-2">
+          <span>Edindiğim Deneyimler</span>
+        </h2>
+
+        <div class="deneyimlerim__container container grid">
+          <div class="deneyimlerim__box" id="deneyimlerim-box-left">
+            <h2 class="deneyimlerim__box__title section__title-3">Yazılım Geliştirme</h2>
+            <div class="deneyimlerim__tabs">
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>HTML</h3>
+                  <p>%100</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>CSS</h3>
+                  <p>%100</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>JScript</h3>
+                  <p>%90</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>TScript</h3>
+                  <p>%80</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>PHP</h3>
+                  <p>%70</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Python</h3>
+                  <p>%40</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>C++</h3>
+                  <p>%20</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Swift</h3>
+                  <p>%10</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="deneyimlerim__box" id="deneyimlerim-box-right">
+            <h2 class="deneyimlerim__box__title section__title-3">E-Ticaret & Pazarlama</h2>
+            <div class="deneyimlerim__tabs">
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Prestashop</h3>
+                  <p>%100</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Opencart</h3>
+                  <p>%90</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>WCommerce</h3>
+                  <p>%75</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Shopify</h3>
+                  <p>%35</p>
+                </div>
+              </article>
+              </div>
+              <div class="deneyimlerim__tabs">
+              <h2 class="deneyimlerim__box__title section__title-3">Grafik Tasarım Programları</h2>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Photoshop</h3>
+                  <p>%90</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="deneyimlerim icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Illustrator</h3>
+                  <p>%40</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projelerim section" id="projelerim">
+        <h2 class="section__title-1">
+          <span>Yaptığım Projeler</span>
+        </h2>
+      
+        <div class="projelerim__container container grid" id="projelerim-container">
+          <!-- GitHub'dan alınan projeler buraya eklenecek -->
+        </div>
+      </section>
+
+      <!--==================== MÜZİK BÖLÜMÜ ====================-->
+      <section class="music section">
+        <h2 class="section__title-2">
+          <span>Spotify Listelerim<i class="ri-spotify-line"></i></span>
+        </h2>
+        <p class="music__title-sub">
+          Müzik dinlemeyi seviyorum, rahatlamama ve işime odaklanmama yardımcı oluyor. <br>
+          İşte kendi yapmış olduğum <a href="https://spotify.mdusova.com/" target="_blank">Spotify Son Dinlediğim Müzikler</a> projem ve en sevdiğim şarkılardan oluşan oynatma listem.
+        </p>
+        <div class="music__container container grid">
+          <div class="music__box" id="music-box-left">
+            <iframe
+              title="Spotify Son Dinlenenler by Mustafa Arda Düşova"
+              style="border-radius: 12px"
+              src="https://spotify.mdusova.com/api?user=31e4wu2ua42rf5qvqaukgjwgz7tu&width=500&count=6"
+              width="100%"
+              height="410"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="music__box" id="music-box-right">
+            <iframe
+              title="for designers Oynatma Listem"
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/playlist/5ns3e4nzwbark1roxYSWnf?utm_source=generator"
+              width="100%"
+              height="410"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== İLETİŞİM BÖLÜMÜ ====================-->
+      <section class="iletisim section" id="iletisim">
+        <div class="iletisim__container grid">
+          <div class="iletisim__data">
+            <h2 class="section__title-2">
+              <span>İletişime Geçelim</span>
+            </h2>
+
+            <p class="iletisim__description-1">
+             Tüm e-postaları okuyorum. Bana istediğiniz mesajı gönderebilirsiniz, size en kısa zamanda dönüş yapacağım.
+            </p>
+
+            <p class="iletisim__description-2">
+              <b>Adınız</b> ve <b>E-posta Adresiniz</b>'e ve size dönüş yapabilmek için biraz süreye ihtiyacım var.
+            </p>
+
+            <div class="geometric-box"></div>
+          </div>
+
+          <div class="iletisim__mail">
+            <h2 class="iletisim__title">Bana mesaj gönder</h2>
+
+            <form action="" class="iletisim__form" id="iletisim-form">
+              <div class="iletisim__group">
+                <div class="iletisim__box">
+                  <input
+                    type="text"
+                    name="user_name" class="iletisim__input"
+                    id="name"
+                    placeholder="Ad soyad giriniz."
+                    required/>
+                  <label for="name" class="iletisim__label">Adınız Soyadınız</label>
+                </div>
+
+                <div class="iletisim__box">
+                  <input
+                    type="email"
+                    name="user_email" class="iletisim__input"
+                    id="email"
+                    placeholder="E-Posta Adresiniz"
+                    required/>
+                  <label for="email" class="iletisim__label">
+                    E-Posta Adresiniz
+                  </label>
+                </div>
+              </div>
+
+              <div class="iletisim__box">
+                <input
+                  type="text"
+                  name="user_subject" class="iletisim__input"
+                  id="subject"
+                  placeholder="Lütfen mesaj konusunu giriniz."
+                  required/>
+                <label for="subject" class="iletisim__label"> Konu </label>
+              </div>
+
+              <div class="iletisim__box iletisim__area">
+                <textarea
+                  name="user_message"
+                  id="message" class="iletisim__input"
+                  placeholder="Lütfen mesajınızı giriniz."
+                  required></textarea>
+                <label for="message" class="iletisim__label"> Mesajınız </label>
+              </div>
+
+              <div class="g-recaptcha"
+                data-sitekey="6LevFzYoAAAAAAULqxbRdA8rTmtz3PK5dOiGGLuB"
+                data-callback="enableBtn"
+                data-expired-callback="tokenExpired"
+                data-error-callback="reVerify"></div>
+              <button class="iletisim__button button"
+                id="iletisim-button"
+                type="submit"
+                disabled>
+                <i class="ri-send-plane-line"></i> Mesaj Gönder
+              </button>
+              <p class="iletisim__message" id="iletisim-message"></p>
+            </form>
+          </div>
+
+          <div class="iletisim__social">
+            <img
+              src="./dosyalar/resimler/kavisliok.svg"
+              alt="kavisliok"
+              class="iletisim__social-arrow"
+            />
+
+            <div class="iletisim__social-data">
+              <div>
+                <p class="iletisim__social-description-1">E-postanız yoksa</p>
+
+                <p class="iletisim__social-description-2">
+                  Bana sosyal medya üzerinden ulaşabilirsiniz.
+                </p>
+              </div>
+
+              <div class="iletisim__social-links">
+                <a href="https://www.instagram.com/mdusova/" target="_blank" class="iletisim__social-link">
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://open.spotify.com/user/31e4wu2ua42rf5qvqaukgjwgz7tu" target="_blank" class="iletisim__social-link">
+                  <i class="ri-spotify-line"></i>
+                </a>
+                <a href="https://github.com/madtethys/" target="_blank" class="iletisim__social-link">
+                  <i class="ri-github-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER BÖLÜMÜ ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <ul class="footer__links">
+          <li><a class="footer__link" href="#hakkimda">Hakkımda</a></li>
+          <li><a class="footer__link" href="#deneyimlerim">Deneyimlerim</a></li>
+          <li><a class="footer__link" href="#projelerim">Projelerim</a></li>
+        </ul>
+
+        <span class="footer__copy">
+          Copyright &#169; 2024 
+          <a href="https://github.com/madtethys">Mustafa Arda Düşova</a> - Tüm Hakları Saklıdır.
+        </span>
+      </div>
+    </footer>
+
+    <!--========== YUKARI scroll ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line"></i>
+    </a>
+    <!--=============== FONKSIYONLAR ===============-->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!--=============== EMAIL JS FONKISYONU ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!--=============== ANA FONKSIYON DOSYASI ===============-->
+    <script src="dosyalar/js/main.js"></script>
+  </body>
+</html>
