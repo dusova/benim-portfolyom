@@ -486,18 +486,15 @@
                 <label for="message" class="iletisim__label"> Mesajınız </label>
               </div>
 
-              <div class="g-recaptcha"
-                data-sitekey="6LdC7k4qAAAAAMy-38Sc9r1RaKHrSXZVjyAVp7D-"
-                data-callback="enableBtn"
-                data-expired-callback="tokenExpired"
-                data-error-callback="reVerify"></div>
-              <button class="iletisim__button button"
-                id="iletisim-button"
-                type="submit"
-                disabled>
-                <i class="ri-send-plane-line"></i> Mesaj Gönder
-              </button>
-              <p class="iletisim__message" id="iletisim-message"></p>
+
+                <div class="h-captcha" data-sitekey="ef8e13d6-23dc-48e8-854c-58706c10d8c6"></div>
+  <button class="iletisim__button button"
+          id="iletisim-button"
+          type="submit"
+          disabled>
+    <i class="ri-send-plane-line"></i> Mesaj Gönder
+  </button>
+  <p class="iletisim__message" id="iletisim-message"></p>
             </form>
           </div>
 
@@ -560,5 +557,27 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--=============== ANA FONKSIYON DOSYASI ===============-->
     <script src="dosyalar/js/main.js"></script>
+        <!--=============== hcaptcha DOSYASI ===============-->
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+<script>
+  function enableBtn() {
+    document.getElementById('iletisim-button').disabled = false;
+  }
+
+  document.querySelector('#iletisim').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const hcaptchaResponse = hcaptcha.getResponse();
+
+    if (!hcaptchaResponse) {
+      alert('Lütfen doğrulamayı tamamlayın!');
+      return;
+    }
+
+    // Burada form verilerini işleyebilirsin
+    // Örnek: fetch ile gönder
+
+    hcaptcha.reset();
+  });
+</script>
   </body>
 </html>
