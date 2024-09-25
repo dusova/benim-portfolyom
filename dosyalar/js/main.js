@@ -147,23 +147,21 @@ const sendEmail = (e) => {
   e?.preventDefault();
   btnSendMessage.innerHTML = "<i class='ri-send-plane-line'></i> Sending...";
   btnSendMessage.disabled = true;
-  // service id, template id, form, public key
   emailjs
     ?.sendForm(
-      "service_jc9nd2h",
-      "template_jiin5n5",
+      "service_6ucm1ji",
+      "template_pe4eizl",
       iletisimForm,
       "bJGLfO20ad8dY_bas"
     )
     ?.then(
       (result) => {
-        iletisimMessage.innerHTML = "Message sent successfully ✅";
+        iletisimMessage.innerHTML = "Mesaj başarılı bir şekilde gönderildi! ✅";
 
         setTimeout(() => {
           iletisimMessage.innerHTML = "";
         }, 5000);
 
-        // reset form
         iletisimForm?.reset();
 
         btnSendMessage.innerHTML =
@@ -172,14 +170,14 @@ const sendEmail = (e) => {
         btnSendMessage.disabled = false;
       },
       (error) => {
-        iletisimMessage.innerHTML = "Message not sent (service error) ❌";
+        iletisimMessage.innerHTML = "Mesaj gönderilemedi! (servis hatası) ❌";
 
         setTimeout(() => {
           iletisimMessage.innerHTML = "";
         }, 5000);
 
         btnSendMessage.innerHTML =
-          "<i class='ri-send-plane-line'></i> Send Message";
+          "<i class='ri-send-plane-line'></i> Mesaj Gönder";
 
         btnSendMessage.disabled = false;
       }
@@ -188,10 +186,8 @@ const sendEmail = (e) => {
 
 iletisimForm.addEventListener("submit", sendEmail);
 
-/*=============== SHOW scroll UP ===============*/
 const scrollUp = () => {
   const scrollUp = document?.getElementById("scroll-up");
-  // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
   this?.scrollY >= 350
     ? scrollUp?.classList?.add("show-scroll")
     : scrollUp?.classList?.remove("show-scroll");
@@ -199,7 +195,6 @@ const scrollUp = () => {
 
 window?.addEventListener("scroll", scrollUp);
 
-/*=============== scroll SECTIONS ACTIVE LINK ===============*/
 const sections = document?.querySelectorAll("section[id]");
 
 const scrollActive = () => {
@@ -222,20 +217,16 @@ const scrollActive = () => {
 };
 window?.addEventListener("scroll", scrollActive);
 
-/*=============== DARK LIGHT THEME ===============*/
-// get current theme of browser
 const isDarkTheme = window?.matchMedia("(prefers-color-scheme: dark)");
 const themeButton = document?.getElementById("theme-button");
 
 const darkTheme = () => {
-  // Add or remove the dark / icon theme
   document?.body?.classList?.add("dark-theme");
   themeButton?.classList?.add("ri-moon-line");
   themeButton?.classList?.remove("ri-sun-line");
 };
 
 const lightTheme = () => {
-  // Add or remove the dark / icon theme
   document?.body?.classList?.remove("dark-theme");
   themeButton?.classList?.remove("ri-moon-line");
   themeButton?.classList?.add("ri-sun-line");
@@ -243,25 +234,19 @@ const lightTheme = () => {
 
 isDarkTheme?.matches ? darkTheme() : lightTheme();
 
-// Detect the dark mode
 isDarkTheme?.addEventListener("change", () => {
   isDarkTheme.matches ? darkTheme() : lightTheme();
 });
-
-// Activate / deactivate the theme manually with the button
 themeButton?.addEventListener("click", () => {
-  // Add or remove the dark / icon theme
   document?.body?.classList?.toggle("dark-theme");
   themeButton?.classList?.toggle("ri-moon-line");
   themeButton?.classList?.toggle("ri-sun-line");
 });
-/*=============== scroll REVEAL ANIMATION ===============*/
 const sr = scrollReveal({
   origin: "top",
   distance: "60px",
   duration: 2500,
   delay: 300,
-  // reset: true, // to repeat animation
 });
 
 sr?.reveal(
