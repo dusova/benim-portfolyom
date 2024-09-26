@@ -129,20 +129,22 @@ const shadowHeader = () => {
     : header?.classList.remove("shadow-header");
 };
 window?.addEventListener("scroll", shadowHeader);
+
+
 const iletisimForm = document?.getElementById("iletisim-form");
 const iletisimMessage = document?.getElementById("iletisim-message");
 const btnSendMessage = document?.getElementById("iletisim-button");
 
 const sendEmail = (e) => {
   e?.preventDefault();
-  btnSendMessage.innerHTML = "<i class='ri-send-plane-line'></i> Sending...";
+  btnSendMessage.innerHTML = "<i class='ri-send-plane-line'></i> Gönderiliyor...";
   btnSendMessage.disabled = true;
   emailjs
     ?.sendForm(
       "service_6ucm1ji",
       "template_pe4eizl",
       iletisimForm,
-      "bJGLfO20ad8dY_bas"
+      "XvUDYMGzr8Auvv-O9"
     )
     ?.then(
       (result) => {
@@ -155,7 +157,7 @@ const sendEmail = (e) => {
         iletisimForm?.reset();
 
         btnSendMessage.innerHTML =
-          "<i class='ri-send-plane-line'></i> Send Message";
+          "<i class='ri-send-plane-line'></i> Mesaj Gönder";
 
         btnSendMessage.disabled = false;
       },
