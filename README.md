@@ -1,23 +1,52 @@
-# Portfolio Website
+# 🚀 Kişisel Portföy Websitesi
 
-## Project is forked from [bedimcode/responsive-portfolio-website-rian](https://github.com/bedimcode/responsive-portfolio-website-rian)
+Bu proje, modern ve şık bir kişisel portföy web sitesi oluşturmayı amaçlayan bir çalışmadır. Proje [bedimcode/responsive-portfolio-website-rian](https://github.com/bedimcode/responsive-portfolio-website-rian) reposundan fork edilmiştir. 🌟
 
-### Portfolio Website
+## 🎯 Özellikler
 
-- Responsive Personal Portfolio Website Using HTML CSS & JavaScript
-- Contains animations when scrolling.
-- Smooth scrolling in each section.
-- Menu with links to the different sections of the website.
-- Dark & Light theme.
-- Auto change the theme following the system theme.
-- Button to change the theme of the website.
-- Captcha in the iletisim form.
-- Send an email to my email address in iletisim form.
-- Download my resume.
-- Footer with links to my social networks.
-- Button to go up to the top of the website.
+- 💻 **Tam Duyarlı Tasarım**: Mobil öncelikli geliştirme, ardından masaüstü için optimize edilmiş.
+- 🎨 **Karanlık & Aydınlık Tema**: Sistemin temasına göre otomatik geçiş ve manuel değiştirme.
+- 🚀 **Yumuşak Kaydırma Animasyonları**: Bölümler arasında akıcı geçişler.
+- 📄 **CV İndirme**: Kullanıcıların CV'ni indirebilmesi.
+- 📩 **İletişim Formu**: Captcha ile güvenli iletişim formu ve doğrudan e-posta gönderme.
+- ⬆️ **Yukarı Dön Düğmesi**: Kullanıcı dostu bir navigasyon.
 
-- Developed first with the Mobile First methodology, then for desktop.
-- Compatible with all mobile devices and with a beautiful and pleasant user interface.
+## 🛠️ Teknolojiler
 
-![preview img](/review-website.png)
+- HTML5
+- CSS3
+- JavaScript (ES6+)
+
+## 📱 Mobil Öncelikli
+
+Bu proje mobil cihazlar için öncelikli olarak geliştirilmiştir, ardından masaüstü cihazlar için optimize edilmiştir. Tüm cihazlarla uyumludur. 
+
+## 📸 Görsel Önizleme
+
+![Websitesi Önizleme](/onizleme.jpeg)
+
+## 📥 İndir ve Başla
+
+Projeyi yerel ortamında çalıştırmak için:
+
+```bash
+# Depoyu klonla
+git clone https://github.com/kullanici-adi/responsive-portfolio-website
+
+# Proje dizinine gir
+cd responsive-portfolio-website
+
+# Tarayıcıda aç
+index.html dosyasını tarayıcınızda açın.
+```
+
+## 🛠️ Geliştirme Adımları
+
+1. Ana sayfa, hakkında, projeler ve iletişim bölümleri hazırlandı.
+2. Temaya uygun olarak CSS ve JS düzenlemeleri yapıldı.
+3. Dark ve light tema entegrasyonu tamamlandı.
+4. İletişim formu için Captcha ve e-posta entegrasyonu sağlandı.
+
+## 💡 İletişim
+
+Bu proje hakkında geri bildirimleriniz veya sorularınız mı var? Bana [info@mdusova.com](mailto:info@mdusova.com) adresinden ulaşabilirsiniz!
