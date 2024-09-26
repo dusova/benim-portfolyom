@@ -55,3 +55,7 @@ index.html dosyasını tarayıcınızda açın.
 ## 💡 İletişim
 
 Bu proje hakkında geri bildirimleriniz veya sorularınız mı var? Bana [info@mdusova.com](mailto:info@mdusova.com) adresinden ulaşabilirsiniz!
+
+## 📜 Lisans
+
+Bu proje [Apache License 2.0](LICENSE) ile lisanslanmıştır. Lisans hakkında daha fazla bilgi için bağlantıya göz atabilirsiniz.
