@@ -14,13 +14,13 @@
       content="Ben Mustafa Arda Düşova, bilgisayarla büyüdüm. Yazılım, grafik tasarım ve e-ticaret alanlarına derin bir tutku geliştirdim. Kullanıcı dostu yazılımlar ve etkileyici tasarımlar oluşturarak markaların dijital dünyada öne çıkmalarına yardımcı oluyorum. E-ticaret platformları geliştiriyor ve dijital pazarlama stratejileri oluşturuyorum. Her projede teknik ve yaratıcı çözümler sunarak markaların büyümesine katkıda bulunuyorum."
     />
 
-    <meta property="og:url" content="https://duyminh.tech/" />
+    <meta property="og:url" content="https://www.mdusova.com/" />
 
-    <meta property="og:title" content="Mustafa Arda Düşova - Frontend Developer" />
+    <meta property="og:title" content="Mustafa Arda Düşova - Full-Stack Developer, E-Commerce & Marketing, Graphic Designer" />
 
     <meta
       property="og:image"
-      content="https://i.pinimg.com/564x/73/0b/3c/730b3ccfda8d72661cf5efb066ef688c.jpg"
+      content="https://gcdnb.pbrd.co/images/BxHJNdQbDInK.png?o=1"
     />
 
     <meta property="og:type" content="website" />
@@ -411,7 +411,7 @@
               style="border-radius: 12px"
               src="https://open.spotify.com/embed/playlist/5ns3e4nzwbark1roxYSWnf?utm_source=generator"
               width="100%"
-              height="414"
+              height="384"
               frameborder="0"
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
@@ -486,15 +486,22 @@
                 <label for="message" class="iletisim__label"> Mesajınız </label>
               </div>
 
-
-                <div class="h-captcha" data-sitekey="ef8e13d6-23dc-48e8-854c-58706c10d8c6"></div>
-  <button class="iletisim__button button"
-          id="iletisim-button"
-          type="submit"
-          disabled>
-    <i class="ri-send-plane-line"></i> Mesaj Gönder
-  </button>
-  <p class="iletisim__message" id="iletisim-message"></p>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LdBYk8qAAAAALglmlHH0HBoPwB8BqpuUmQvETmd"
+                data-callback="enableBtn"
+                data-expired-callback="tokenExpired"
+                data-error-callback="reVerify"
+              ></div>
+              <button
+                class="contact__button button"
+                id="contact-button"
+                type="submit"
+                disabled
+              >
+                <i class="ri-send-plane-line"></i> Send Message
+              </button>
+              <p class="contact__message" id="contact-message"></p>
             </form>
           </div>
 
@@ -557,27 +564,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--=============== ANA FONKSIYON DOSYASI ===============-->
     <script src="dosyalar/js/main.js"></script>
-        <!--=============== hcaptcha DOSYASI ===============-->
-    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-<script>
-  function enableBtn() {
-    document.getElementById('iletisim-button').disabled = false;
-  }
-
-  document.querySelector('#contact-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const hcaptchaResponse = hcaptcha.getResponse();
-
-    if (!hcaptchaResponse) {
-      alert('Lütfen doğrulamayı tamamlayın!');
-      return;
-    }
-
-    // Burada form verilerini işleyebilirsin
-    // Örnek: fetch ile gönder
-
-    hcaptcha.reset();
-  });
-</script>
   </body>
 </html>
