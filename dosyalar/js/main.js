@@ -89,7 +89,7 @@ async function fetchGitHubRepos() {
       projectCard.innerHTML = `
         <a href="${repo.html_url}" target="_blank" class="projelerim__link">
           <div class="projelerim__image">
-            <img src="${projectImage}" style="border-radius:10px" alt="${projectName}" class="projelerim__img" />
+            <img src="${projectImage}" style="border-radius:10px; height:273px; width:300px;" alt="${projectName}" class="projelerim__img" />
             <a href="${repo.html_url}" target="_blank" class="projelerim__button button">
               <i class="ri-arrow-right-up-line"></i>
             </a>
