@@ -21,9 +21,14 @@ Bu proje, modern ve şık bir kişisel portföy web sitesi oluşturmayı amaçla
 
 Bu proje mobil cihazlar için öncelikli olarak geliştirilmiştir, ardından masaüstü cihazlar için optimize edilmiştir. Tüm cihazlarla uyumludur. 
 
-## 📸 Görsel Önizleme
+## 📸 Görsel Önizleme (☀️ Aydınlık Tema)
 
-![Websitesi Önizleme](/onizleme.jpeg)
+[![Websitesi Önizleme](/onizleme.jpeg)](https://mdusova.com)
+
+## 📸 Görsel Önizleme (🌙 Karanlık Tema)
+
+[![Websitesi Koyu Önizleme](/koyu_onizleme.jpeg)](https://mdusova.com)
+
 
 ## 📥 İndir ve Başla
 
@@ -31,10 +36,10 @@ Projeyi yerel ortamında çalıştırmak için:
 
 ```bash
 # Depoyu klonla
-git clone https://github.com/kullanici-adi/responsive-portfolio-website
+git clone https://github.com/madtethys/benim-portfolyom
 
 # Proje dizinine gir
-cd responsive-portfolio-website
+cd benim-portfolyom
 
 # Tarayıcıda aç
 index.html dosyasını tarayıcınızda açın.
@@ -45,7 +50,7 @@ index.html dosyasını tarayıcınızda açın.
 1. Ana sayfa, hakkında, projeler ve iletişim bölümleri hazırlandı.
 2. Temaya uygun olarak CSS ve JS düzenlemeleri yapıldı.
 3. Dark ve light tema entegrasyonu tamamlandı.
-4. İletişim formu için Captcha ve e-posta entegrasyonu sağlandı.
+4. İletişim formu için reCaptcha ve e-posta entegrasyonu sağlandı.
 
 ## 💡 İletişim
 
