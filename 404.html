@@ -212,7 +212,10 @@
             column-gap: .5rem;
             font-size: var(--smaller-font-size);
             align-self: flex-end;
-            padding: 1rem; /* Footer'a biraz padding ekledik */
+            padding: 1rem;
+            background-color: var(--first-color); /* Arka plan rengi ekle */
+            position: relative; /* Konumlandırmayı ayarladık */
+            z-index: 10; /* Üstte görünmesi için z-index */
         }
 
         @media screen and (max-width: 768px) {
