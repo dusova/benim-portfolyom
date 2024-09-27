@@ -205,11 +205,24 @@
         }
 
         .home__footer {
-          display: flex;
-          justify-content: center;
-          column-gap: .5rem;
-          font-size: var(--smaller-font-size);
-          align-self: flex-end;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Elemanların birden fazla satıra geçebilmesi için */
+            column-gap: .5rem;
+            font-size: var(--smaller-font-size);
+            align-self: flex-end;
+            padding: 1rem; /* Footer'a biraz padding ekledik */
+        }
+
+        @media screen and (max-width: 768px) {
+            .home__footer {
+                font-size: .8rem; /* Küçük ekranlar için yazı boyutunu azalt */
+            }
+            .home__footer span {
+                display: block; /* Her bir span öğesini ayrı satırlara yerleştir */
+                margin: .2rem 0; /* Üst ve alt boşluk ekle */
+            }
         }
 
         @keyframes floaty {
