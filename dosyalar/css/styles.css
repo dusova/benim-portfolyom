@@ -807,24 +807,37 @@ body.dark-theme {
   height: 100px;
 }
 
+.music {
+  margin-bottom: 1.5rem;
+}
+
+.music__title-sub {
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 2.5rem;
+  padding: 0 1rem;
+  letter-spacing: 0.5px;
+}
+
 .music__container {
   display: flex;
   justify-content: space-between;
   gap: 20px; /* İki kutu arasındaki boşluk */
   flex-wrap: wrap; /* Küçük ekranlarda alt alta gelmelerini sağlar */
-  row-gap: 2rem; /* Orijinalindeki boşluğu koruyalım */
+  row-gap: 2rem; /* Orijinal boşluğu koruyoruz */
 }
 
 .music__box {
   flex: 1;
-  max-width: 48%; /* Genişlikleri eşitler, ekranın %48'ini kaplar */
+  max-width: 48%; /* Eşit genişlik */
 }
 
 iframe {
   width: 100%;
-  height: 410px; /* İkisini de aynı yükseklikte tutalım */
-  border-radius: 12px;
+  height: 410px; /* İki iframe'in de yüksekliğini eşit tutalım */
+  border-radius: 12px; /* Kenarları yuvarlak olacak */
 }
+
 
 .iletisim {
   padding-bottom: 0;
