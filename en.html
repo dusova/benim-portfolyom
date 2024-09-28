@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="Mustafa Arda Dusova, mdusova, Software, Graphic Design, E-Commerce & Marketing, mdusova.com, Mustafa Arda,"
+    />
+
+    <meta
+      name="description"
+      content="I am Mustafa Arda Dusova, I grew up with computers. I have developed a deep passion for software, graphic design and e-commerce. I help brands stand out in the digital world by creating user-friendly software and impressive designs. I develop e-commerce platforms and create digital marketing strategies. I contribute to the growth of brands by providing technical and creative solutions in every project."
+    />
+
+    <meta property="og:url" content="https://www.mdusova.com/" />
+
+    <meta property="og:title" content="Mustafa Arda Dusova - Full-Stack Developer, E-Commerce & Marketing, Graphic Designer" />
+
+    <meta
+      property="og:image"
+      content="https://gcdnb.pbrd.co/images/BxHJNdQbDInK.png?o=1"
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta property="og:site_name" content="Mustafa Arda Dusova" />
+
+    <meta
+      property="og:description"
+      content="I am Mustafa Arda Dusova, I grew up with computers. I have developed a deep passion for software, graphic design and e-commerce. I help brands stand out in the digital world by creating user-friendly software and impressive designs. I develop e-commerce platforms and create digital marketing strategies. I contribute to the growth of brands by providing technical and creative solutions in every project."
+    />
+
+    <meta property="og:locale" content="en_US" />
+
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="dosyalar/resimler/favicon.webp"
+      type="image/x-icon"
+    />
+
+    <!--=============== REMIXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css"
+      crossorigin=""
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="dosyalar/css/enstyles.css" />
+    <link rel="stylesheet" href="dosyalar/css/enmediaqueries.css" />
+
+    <title>Mustafa Arda Dusova</title>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=GTM-NMFDR4MQ"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "GTM-NMFDR4MQ");
+    </script>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function enableBtn(token) {
+        if (token) {
+          document.querySelector("#contact-button").disabled = false;
+        }
+      }
+
+      function reVerify() {
+        grecaptcha.reset();
+        document.querySelector("#contact-button").disabled = true;
+      }
+
+      function tokenExpired() {
+        document.querySelector("#contact-button").disabled = true;
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo">
+          <span class="nav__logo-circle">MA</span>
+          <span class="nav__logo-name">Mustafa Arda Dusova</span>
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <span class="nav__title">Menu</span>
+
+          <h3 class="nav__name">Mustafa Arda Dusova</h3>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#homepage" class="nav__link">Home</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#projects" class="nav__link">Projects</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link">Contact</a>
+            </li>
+
+            <li class="nav__item">
+              <a href="./dosyalar/cv/mdusovaCV.pdf" target="_blank" class="nav__link nav__link-button">
+                <i class="ri-download-2-line"></i> View CV
+              </a>
+            </li>
+            
+
+          
+          </ul>
+          <!-- KAPATMA BUTONU -->
+          <div class="nav__close" id="nav-close">
+            <i class="ri-close-line"></i>
+          </div>
+        </div>
+
+        <div class="nav__buttons">
+          <!-- TEMA BUTONU -->
+          <i class="change-theme" id="theme-button"></i>
+          <!-- DEĞİŞEN BUTON -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-4-line"></i>
+          </div>
+          <!-- DİL BUTONU -->
+            <div class="lang-switch">
+              <i class="ri-global-line">
+                <a href="https://mdusova.com/tr" class="nav__link">TR</a>
+              </i>
+            </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== HTML ANA BÖLÜM ====================-->
+    <main class="main">
+      <!--==================== GİRİŞ BÖLÜMÜ ====================-->
+      <section class="homepage section" id="homepage">
+        <div class="homepage__container container grid">
+          <h1 class="homepage__name">Mustafa A. Dusova</h1>
+
+          <div class="homepage__perfil">
+            <div class="homepage__image">
+              <img src="./dosyalar/resimler/girisfotografi.webp" alt="Mustafa Arda Dusova" class="homepage__img"/>
+              <div class="homepage__shadow"></div>
+
+              <img src="./dosyalar/resimler/kavisliok.svg" alt="kavisliok" class="homepage__arrow"/>
+              <img src="./dosyalar/resimler/rastgelecizgiler.svg" alt="rastgelecizgiler" class="homepage__line"/>
+
+              <div class="geometric-box"></div>
+            </div>
+
+            <div class="homepage__social">
+              <a href="https://www.instagram.com/mdusova/" target="_blank" class="homepage__social-link">
+                <i class="ri-instagram-line"></i>
+              </a>
+
+              <a href="https://open.spotify.com/user/31e4wu2ua42rf5qvqaukgjwgz7tu" target="_blank" class="homepage__social-link">
+                <i class="ri-spotify-line"></i>
+              </a>
+
+              <a href="https://github.com/madtethys" target="_blank" class="homepage__social-link">
+                <i class="ri-github-line"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="homepage__info">
+            <p class="homepage__description">
+                I'm, Mustafa Arda Dusova, I work on <br><b>Graphic Design</b>,<br><b>Software Development</b>, <br><b>E-Commerce and Marketing</b><br>.
+            </p>
+
+            <a href="#about" class="homepage__scroll">
+              <div class="homepage__scroll-box">
+                <i class="ri-arrow-down-s-line"></i>
+              </div>
+
+              <span class="homepage__scroll-text">Scroll Down</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== HAKKIMDA BÖLÜMÜ ====================-->
+      <section class="about section" id="about">
+        <div class="about__container container grid">
+          <h2 class="section__title-1">About Me</h2>
+
+          <div class="about__perfil">
+            <div class="about__image">
+              <img src="./dosyalar/resimler/aboutfotografi.webp" alt="Mustafa Arda Dusova" class="about__img"/>
+              <div class="about__shadow"></div>
+
+              <div class="geometric-box"></div>
+              <img src="./dosyalar/resimler/rastgelecizgiler.svg" alt="rastgelecizgiler" class="about__line"/>
+              <div class="about__box"></div>
+            </div>
+          </div>
+
+          <div class="about__info">
+            <p class="about__description">
+                I am Mustafa Arda Dusova, I grew up with computers. I have developed a deep passion for <br><b>software</b>, <b>graphic design</b> and <b>e-commerce</b>. I help brands stand out in the digital world by creating user-friendly software and impressive designs. I develop e-commerce platforms and create digital marketing strategies. I contribute to the growth of brands by providing technical and creative solutions in every project.            </p>
+
+            <ul class="about__list">
+              <li class="about__item">
+                <b>My skills:</b> HTML, CSS, JavaScript, React, Git & GitHub, Photoshop, Illustrator, Shopify, WooCommerce, Opencart etc.
+              </li>
+            </ul>
+
+            <div class="about__buttons">
+              <a href="./dosyalar/cv/mdusovaCV.pdf" target="_blank" class="button">
+                <i class="ri-download-2-line"></i> View CV
+              </a>
+
+              <a href="#contact" class="button__ghost">
+                <i class="ri-send-plane-line"></i>
+                <span class="button__ghost-title">Contact Me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== DENEYİMLERİM BÖLÜMÜ ====================-->
+      <section class="experiences section" id="experiences">
+        <h2 class="section__title-2">
+          <span>My Experiences</span>
+        </h2>
+
+        <div class="experiences__container container grid">
+          <div class="experiences__box" id="experiences-box-left">
+            <h2 class="experiences__box__title section__title-3">Software Development</h2>
+            <div class="experiences__tabs">
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>HTML</h3>
+                  <p>%100</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>CSS</h3>
+                  <p>%100</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>JScript</h3>
+                  <p>%90</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>TScript</h3>
+                  <p>%80</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>PHP</h3>
+                  <p>%70</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Python</h3>
+                  <p>%40</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>C++</h3>
+                  <p>%20</p>
+                </div>
+              </article>
+
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Swift</h3>
+                  <p>%10</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="experiences__box" id="experiences-box-right">
+            <h2 class="experiences__box__title section__title-3">E-Commerce & Marketing</h2>
+            <div class="experiences__tabs">
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Prestashop</h3>
+                  <p>%100</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Opencart</h3>
+                  <p>%90</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>WCommerce</h3>
+                  <p>%75</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Shopify</h3>
+                  <p>%35</p>
+                </div>
+              </article>
+              </div>
+              <div class="experiences__tabs">
+              <h2 class="experiences__box__title section__title-3">Graphic Design Programs</h2>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Photoshop</h3>
+                  <p>%90</p>
+                </div>
+              </article>
+              <article>
+                <img src="./dosyalar/resimler/onaytik.webp" alt="experiences icon" class="icon"/>
+                <div class="article__box"></div>
+                <div class="article__title">
+                  <h3>Illustrator</h3>
+                  <p>%40</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects section" id="projects">
+        <h2 class="section__title-1">
+          <span>My Projects</span>
+        </h2>
+      
+        <div class="projelerim__container container grid" id="projelerim-container">
+          <!-- GitHub'dan alınan projeler buraya eklenecek -->
+        </div>
+      </section>
+
+      <!--==================== MÜZİK BÖLÜMÜ ====================-->
+      <section class="music section">
+        <h2 class="section__title-2">
+          <span>My Spotify Playlists<i class="ri-spotify-line"></i></span>
+        </h2>
+        <p class="music__title-sub">
+            I love listening to music, it helps me relax and focus on my work. <br>
+            Here are my playlists of my favorite songs.
+        </p>
+        <div class="music__container container grid">
+          <div class="music__box" id="music-box-left">
+            <iframe
+              title="Playlist Cá Hồi Hoang"
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/playlist/5aC4z5UCG4ePTixtSdOzmb?utm_source=generator"
+              width="100%"
+              height="410"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="music__box" id="music-box-right">
+            <iframe
+              title="for designers. Oynatma Listem"
+              style="border-radius: 12px"
+              src="https://open.spotify.com/embed/playlist/5ns3e4nzwbark1roxYSWnf?utm_source=generator"
+              width="100%"
+              height="410"
+              frameborder="0"
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+
+      <!--==================== İLETİŞİM BÖLÜMÜ ====================-->
+      <section class="contact section" id="contact">
+        <div class="contact__container grid">
+          <div class="contact__data">
+            <h2 class="section__title-2">
+              <span>Contact Me</span>
+            </h2>
+
+            <p class="contact__description-1">
+                I read all emails. You can send me any message you want, I will get back to you as soon as possible.
+            </p>
+
+            <p class="contact__description-2">
+                I need your <b>Name</b> and <b>E-mail Address</b> and some time to get back to you.
+            </p>
+
+            <div class="geometric-box"></div>
+          </div>
+
+          <div class="contact__mail">
+            <h2 class="contact__title">Send me a message</h2>
+
+            <form action="" class="contact__form" id="contact-form">
+              <div class="contact__group">
+                <div class="contact__box">
+                  <input
+                    type="text"
+                    name="adsoyad" class="contact__input"
+                    id="name"
+                    placeholder="Name Surname"
+                    required/>
+                  <label for="name" class="contact__label">Name Surname
+                  </label>
+                </div>
+
+                <div class="contact__box">
+                  <input
+                    type="email"
+                    name="eposta" class="contact__input"
+                    id="email"
+                    placeholder="Your Email Address"
+                    required/>
+                  <label for="email" class="contact__label">
+                    Your Email Address
+                  </label>
+                </div>
+              </div>
+
+              <div class="contact__box">
+                <input
+                  type="text"
+                  name="konu" class="contact__input"
+                  id="subject"
+                  placeholder="Please enter the message subject."
+                  required/>
+                <label for="subject" class="contact__label"> Subject </label>
+              </div>
+
+              <div class="contact__box contact__area">
+                <textarea
+                  name="mesaj"
+                  id="message" class="contact__input"
+                  placeholder="Please enter your message."
+                  required></textarea>
+                <label for="message" class="contact__label"> Your Message </label>
+              </div>
+
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LdBYk8qAAAAALglmlHH0HBoPwB8BqpuUmQvETmd"
+                data-callback="enableBtn"
+                data-expired-callback="tokenExpired"
+                data-error-callback="reVerify"
+              ></div>
+              <button
+                class="contact__button button"
+                id="contact-button"
+                type="submit"
+                disabled
+              >
+                <i class="ri-send-plane-line"></i> Send Message
+              </button>
+              <p class="contact__message" id="contact-message"></p>
+            </form>
+          </div>
+
+          <div class="contact__social">
+            <img
+              src="./dosyalar/resimler/kavisliok.svg"
+              alt="kavisliok"
+              class="contact__social-arrow"
+            />
+
+            <div class="contact__social-data">
+              <div>
+                <p class="contact__social-description-1">If you don't have an email</p>
+
+                <p class="contact__social-description-2">
+                    You can reach me via social media.
+                </p>
+              </div>
+
+              <div class="contact__social-links">
+                <a href="https://www.instagram.com/mdusova/" target="_blank" class="contact__social-link">
+                  <i class="ri-instagram-line"></i>
+                </a>
+                <a href="https://open.spotify.com/user/31e4wu2ua42rf5qvqaukgjwgz7tu" target="_blank" class="contact__social-link">
+                  <i class="ri-spotify-line"></i>
+                </a>
+                <a href="https://github.com/madtethys/" target="_blank" class="contact__social-link">
+                  <i class="ri-github-line"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER BÖLÜMÜ ====================-->
+    <footer class="footer">
+      <div class="footer__container container grid">
+        <ul class="footer__links">
+          <li><a class="footer__link" href="#about">About me</a></li>
+          <li><a class="footer__link" href="#experiences">My Experiences</a></li>
+          <li><a class="footer__link" href="#projects">My Projects</a></li>
+        </ul>
+
+        <span class="footer__copy">
+          Copyright &#169; 2024 
+          <a href="https://github.com/madtethys">Mustafa Arda Dusova</a> - All rights reserved.
+        </span>
+      </div>
+    </footer>
+
+    <!--========== YUKARI scroll ==========-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-s-line"></i>
+    </a>
+    <!--=============== FONKSIYONLAR ===============-->
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <!--=============== EMAIL JS FONKISYONU ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!--=============== ANA FONKSIYON DOSYASI ===============-->
+    <script src="dosyalar/js/enmain.js"></script>
+  </body>
+</html>
