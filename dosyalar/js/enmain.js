@@ -35,6 +35,21 @@ const projectNameMapping = {
   // Diğer projeleri buraya ekleyin
 };
 
+// Proje açıklamaları için eşleme nesnesi
+const projectDescriptionMapping = {
+  'basit-yapilacaklar-listesi': 'This is a simple to-do list application where you can add, delete, and mark tasks as completed.',
+  'grafik-tasarimci-portfolyo': 'A portfolio template designed for graphic designers to showcase their work.',
+  'havadurumu': 'Weather forecasting app that provides real-time updates and detailed weather reports.',
+  'iphone-hesap-makinesi': 'A clone of the iPhone calculator with basic functionalities like addition, subtraction, multiplication, and division.',
+  'madtethysdb': 'A project focused on building a lightweight database.',
+  'yapayzeka-araclari': 'A collection of artificial intelligence tools for various tasks such as image processing and text analysis.',
+  'reddit-api-rastgele-resim': 'Fetch random images from Reddit using the Reddit API.',
+  'sayi-tahmin-oyunu': 'A simple number guessing game where players attempt to guess the correct number.',
+  'madtethys': 'The main repository for MadTethys, containing documentation and setup guides.',
+  'spotify-son-dinlenenler': 'Displays your recently played tracks on Spotify.',
+  // Diğer projeleri buraya ekleyin
+};
+
 // Her proje için görsel URL'lerini içeren eşleme nesnesi
 const projectImageMapping = {
   'grafik-tasarimci-portfolyo': 'https://mdusova.com/dosyalar/resimler/madgrafik.webp',
@@ -77,7 +92,7 @@ async function fetchGitHubRepos() {
       projectCard.className = 'projects__card';
 
       // Açıklamayı kısıtlama
-      const description = repo.description || 'Bu projede açıklama bulunmuyor.';
+      const description = projectDescriptionMapping[repo.name] || 'No description available for this project.';
       const shortDescription = description.length > maxDescriptionLength ? 
         description.substring(0, maxDescriptionLength) + '...' : 
         description;
@@ -96,12 +111,12 @@ async function fetchGitHubRepos() {
           </div>
         </a>
         <div class="projects__content">
-          <h3 class="projects__subtitle">GitHub Projesi</h3>
+          <h3 class="projects__subtitle">GitHub Project</h3>
           <h2 class="projects__title">${projectName}</h2>
           <p class="projects__description">${shortDescription}</p>
         </div>
         <a href="${repo.html_url}" target="_blank" class="projects__demo button">
-          <i class="ri-layout-6-line"></i> Projeyi Gör
+          <i class="ri-layout-6-line"></i> View Project
         </a>
       `;
       projectsContainer.appendChild(projectCard);
@@ -113,7 +128,6 @@ async function fetchGitHubRepos() {
 
 // Sayfa yüklendiğinde fonksiyonu çağır
 window.onload = fetchGitHubRepos;
-
 
 const navLink = document?.querySelectorAll(".nav__link");
 
