@@ -10,6 +10,7 @@ Bu proje, modern ve şık bir kişisel portföy web sitesi oluşturmayı amaçla
 - 📄 **CV İndirme**: Kullanıcıların CV'ni indirebilmesi.
 - 📩 **İletişim Formu**: Captcha ile güvenli iletişim formu ve doğrudan e-posta gönderme.
 - ⬆️ **Yukarı Dön Düğmesi**: Kullanıcı dostu bir navigasyon.
+- 🌐 **Dil Değiştirme Düğmesi**: İngilizce/Türkçe dil desteği.
 
 ## 🛠️ Teknolojiler
 
@@ -51,6 +52,7 @@ index.html dosyasını tarayıcınızda açın.
 2. Temaya uygun olarak CSS ve JS düzenlemeleri yapıldı.
 3. Dark ve light tema entegrasyonu tamamlandı.
 4. İletişim formu için reCaptcha ve e-posta entegrasyonu sağlandı.
+5. İngilizce dil desteği getirildi.
 
 ## 💡 İletişim
 
