@@ -13,7 +13,7 @@ navClose?.addEventListener("click", () => {
 /*===== GİTHUB PROJELERİ ÇEKME =====*/
 
 // GitHub kullanıcı adınızı buraya yazın
-const githubUsername = 'madtethys';
+const githubUsername = 'dusova';
 const personalAccessToken = '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'; // Buraya kendi token'ınızı ekleyin
 const projelerimContainer = document.getElementById('projelerim-container');
 
@@ -23,36 +23,36 @@ const maxDescriptionLength = 201; // Karakter sayısını buradan ayarlayın
 // Proje adlarını güncellemek için eşleme nesnesi
 const projectNameMapping = {
   'basit-yapilacaklar-listesi': 'Basit Yapılacaklar Listesi',
-  'grafik-tasarimci-portfolyo': 'Grafik Tasarımcı Portfolyo',
-  'havadurumu': 'Hava Durumu',
-  'iphone-hesap-makinesi': 'iPhone Hesap Makinesi',
-  'madtethysdb': 'MadTethys Database',
-  'yapayzeka-araclari': 'Yapay Zeka Araçları',
-  'reddit-api-rastgele-resim': 'Reddit API Rastgele Resim',
+  'graphic-design-portfolio': 'Grafik Tasarımcı Portfolyo',
+  'weather-forecast': 'Hava Durumu',
+  'iphone-calculator': 'iPhone Hesap Makinesi',
+  'dusovadb': 'MadTethys Database',
+  'ai-tools': 'Yapay Zeka Araçları',
+  'reddit-random-image-api': 'Reddit API Rastgele Resim',
   'sayi-tahmin-oyunu': 'Sayı Tahmin Oyunu',
-  'madtethys': 'MadTethys ReadMe',
-  'spotify-son-dinlenenler': 'Spotify Son Dinlenen Müzikler',
+  'dusova': 'MadTethys ReadMe',
+  'spotify-recently-played': 'Spotify Son Dinlenen Müzikler',
   // Diğer projeleri buraya ekleyin
 };
 
 // Her proje için görsel URL'lerini içeren eşleme nesnesi
 const projectImageMapping = {
-  'grafik-tasarimci-portfolyo': 'https://mdusova.com/dosyalar/resimler/madgrafik.webp',
-  'madtethysdb': 'https://mdusova.com/dosyalar/resimler/madtethysdb.webp',
-  'yapayzeka-araclari': 'https://mdusova.com/dosyalar/resimler/yapayzeka.webp',
-  'reddit-api-rastgele-resim': 'https://mdusova.com/dosyalar/resimler/redditapi.webp',
-  'madtethys': 'https://mdusova.com/dosyalar/resimler/readme.webp',
-  'spotify-son-dinlenenler': 'https://spotify.mdusova.com/api?user=31e4wu2ua42rf5qvqaukgjwgz7tu&width=300&count=4',
+  'graphic-design-portfolio': 'https://mdusova.com/dosyalar/resimler/madgrafik.webp',
+  'dusovadb': 'https://mdusova.com/dosyalar/resimler/madtethysdb.webp',
+  'ai-tools': 'https://mdusova.com/dosyalar/resimler/yapayzeka.webp',
+  'reddit-random-image-api': 'https://mdusova.com/dosyalar/resimler/redditapi.webp',
+  'dusova': 'https://mdusova.com/dosyalar/resimler/readme.webp',
+  'spotify-recently-played': 'https://spotify.mdusova.com/api?user=31e4wu2ua42rf5qvqaukgjwgz7tu&width=300&count=4',
   // Diğer projeleri buraya ekleyin
 };
 
 const projectOrder = [
-  'spotify-son-dinlenenler',
-  'grafik-tasarimci-portfolyo',
-  'madtethysdb',
-  'reddit-api-rastgele-resim',
-  'yapayzeka-araclari',
-  'madtethys',
+  'spotify-recently-played',
+  'graphic-design-portfolio',
+  'dusovadb',
+  'reddit-random-image-api',
+  'ai-tools',
+  'dusova',
   // Diğer projeleri istediğiniz sırada ekleyin
 ];
 
