@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hayırlı Cumalar | Eğlenceli Versiyon</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(45deg, #f27d9d, #8460ed);
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .sound-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      font-size: 48px;
+      cursor: pointer;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+      z-index: 20;
+      transition: transform 0.3s ease;
+    }
+    
+    .sound-icon:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: scale(1.1);
+    }
+    
+    .sound-on {
+      color: #00ff00;
+    }
+    
+    .sound-off {
+      color: #ff0000;
+    }
+    
+    .emoji {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0;
+      animation: fadeMoveUp 6s infinite;
+      z-index: 1;
+    }
+    
+    @keyframes fadeMoveUp {
+      0% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-100px) rotate(180deg);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-200px) rotate(360deg);
+      }
+    }
+    
+    .text {
+      position: absolute;
+      text-align: center;
+      font-size: 96px;
+      color: white;
+      text-shadow: 
+        0 0 10px rgba(0,0,0,0.5),
+        3px 3px 0 #000;
+      font-weight: bold;
+      opacity: 0;
+      animation: fadeText 5s forwards; /* Animasyon süresini 9s'den 5s'e düşürdük */
+      z-index: 10;
+      line-height: 1.2;
+      width: 100%;
+      text-transform: uppercase;
+      transform-origin: center;
+    }
+    
+    .text:nth-child(1) {
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 24px;
+      animation-delay: 0s; /* İlk metin hemen başlıyor */
+    }
+    
+    .text:nth-child(2) {
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 24px;
+      animation-delay: 2s; /* İkinci metin daha erken başlıyor */
+    }
+    
+    .text:nth-child(3) {
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      animation-delay: 4s; /* Üçüncü metin daha erken başlıyor */
+    }
+    
+    @keyframes fadeText {
+      0% {
+        opacity: 0;
+        transform: translateX(-50%) scale(0.5);
+      }
+      10% {
+        opacity: 1;
+        transform: translateX(-50%) scale(1.1);
+      }
+      20% {
+        transform: translateX(-50%) scale(1);
+      }
+      80% { /* Görünür kalma süresini kısalttık */
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: translateX(-50%) scale(1.2);
+      }
+    }
+    
+    .final-message {
+      position: absolute;
+      font-size: 100px;
+      opacity: 0;
+      animation: finalMessage 1s 8.5s forwards;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      text-align: center;
+      color: white;
+      text-shadow: 3px 3px 0 #000;
+    }
+    
+    @keyframes finalMessage {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+      70% {
+        transform: translate(-50%, -50%) scale(1.2);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    .bounce {
+      animation: bounce 0.5s ease infinite alternate;
+    }
+    
+    @keyframes bounce {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+
+    .restart-button {
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 12px 24px;
+      background: white;
+      color: #8460ed;
+      border: none;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 20;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      animation: showButton 1s 16s forwards;
+    }
+    
+    .restart-button:hover {
+      background: #8460ed;
+      color: white;
+    }
+    
+    @keyframes showButton {
+      to { opacity: 1; }
+    }
+    
+    .background-shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      animation: floatAround 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes floatAround {
+      0% { transform: translate(0, 0) rotate(0deg); }
+      33% { transform: translate(100px, 50px) rotate(120deg); }
+      66% { transform: translate(-50px, 100px) rotate(240deg); }
+      100% { transform: translate(0, 0) rotate(360deg); }
+    }
+
+    @media (max-width: 960px) {
+      .text {
+        font-size: 64px;
+      }
+    
+      .final-message {
+        font-size: 70px;
+      }
+    
+      .sound-icon {
+        font-size: 36px;
+        padding: 8px;
+      }
+    
+      .emoji {
+        font-size: 18px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .text {
+        font-size: 48px;
+      }
+    
+      .final-message {
+        font-size: 60px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .text {
+        font-size: 32px;
+      }
+    
+      .final-message {
+        font-size: 40px;
+      }
+    
+      .sound-icon {
+        font-size: 28px;
+        padding: 6px;
+      }
+    
+      .emoji {
+        font-size: 14px;
+      }
+    }  
+  </style>
+</head>
+<body>
+  <div class="text">Yolumuzdan şüphemiz yok,</div>
+  <div class="text">Tozlu gören</div>
+  <div class="text">Camını silsin.</div>
+
+  <div class="final-message">
+    HAYIRLI CUMALAR
+    <div style="font-size: 80px; margin-top: 20px;">🌙 🌹 ✨</div>
+  </div>
+
+  <div class="sound-icon sound-off" onclick="toggleSound()">🔇</div>
+  <button class="restart-button" onclick="restartAnimation()">Tekrar İzle</button>
+
+  <footer style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); color: white; font-size: 18px; text-align: center; z-index: 30;">
+    <p> Copyright © 2025 | 
+        <a href="#" style="text-decoration: none; color: white;">
+          Mustafa Arda Düşova 
+        </a>
+        - Tüm hakları saklıdır.
+    </p>
+  </footer>
+
+  <script>
+    for (let i = 0; i < 10; i++) {
+      const shape = document.createElement('div');
+      shape.classList.add('background-shape');
+      
+      const size = Math.random() * 300 + 100;
+      shape.style.width = `${size}px`;
+      shape.style.height = `${size}px`;
+      
+      shape.style.top = `${Math.random() * 100}%`;
+      shape.style.left = `${Math.random() * 100}%`;
+      
+      shape.style.animationDuration = `${Math.random() * 30 + 20}s`;
+      shape.style.animationDelay = `${Math.random() * 10}s`;
+      
+      document.body.appendChild(shape);
+    }
+    
+    let isPlaying = false;
+    const soundIcon = document.querySelector('.sound-icon');
+    const audio = new Audio('./geylani.mp3'); 
+    audio.loop = true;
+
+    function toggleSound() {
+      if (isPlaying) {
+        audio.pause();
+        soundIcon.textContent = "🔇";
+        soundIcon.classList.remove('sound-on');
+        soundIcon.classList.add('sound-off');
+      } else {
+        audio.play().catch(e => console.log("Otomatik Oynatma'da Hata!"));
+        soundIcon.textContent = "🔊";
+        soundIcon.classList.remove('sound-off');
+        soundIcon.classList.add('sound-on');
+      }
+      isPlaying = !isPlaying;
+    }
+
+    const emojiList = ['🌙', '🌹', '✨', '💫', '🤲', '☪️', '🕌', '❤️', '🙏'];
+    const emojiCount = 150;
+    const container = document.body;
+
+    for (let i = 0; i < emojiCount; i++) {
+      createEmoji();
+    }
+
+    function createEmoji() {
+      const emoji = document.createElement('div');
+      emoji.classList.add('emoji');
+      emoji.textContent = emojiList[Math.floor(Math.random() * emojiList.length)];
+
+      emoji.style.top = Math.random() * 100 + '%';
+      emoji.style.left = Math.random() * 100 + '%';
+      emoji.style.fontSize = (Math.random() * 20 + 12) + 'px';
+      emoji.style.animationDuration = Math.random() * 4 + 3 + 's';
+      emoji.style.animationDelay = Math.random() * 5 + 's';
+
+      container.appendChild(emoji);
+    }
+
+    function restartAnimation() {
+      document.querySelectorAll('.text, .final-message').forEach(el => {
+        el.style.animation = 'none';
+      });
+      
+      void document.body.offsetWidth;
+      
+      document.querySelectorAll('.text').forEach((el, index) => {
+        const delays = [0, 2, 4];
+        el.style.animation = `fadeText 5s forwards ${delays[index]}s`;
+      });
+      
+      document.querySelector('.final-message').style.animation = 'finalMessage 1s 10s forwards';
+      
+      document.querySelectorAll('.emoji').forEach(emoji => {
+        emoji.remove();
+      });
+      
+      for (let i = 0; i < emojiCount; i++) {
+        createEmoji();
+      }
+      
+      const colors = [
+        ['#f27d9d', '#8460ed'],
+        ['#84fab0', '#8fd3f4'],
+        ['#a1c4fd', '#c2e9fb'],
+        ['#ffecd2', '#fcb69f'],
+        ['#ff9a9e', '#fad0c4']
+      ];
+      
+      const randomColors = colors[Math.floor(Math.random() * colors.length)];
+      document.body.style.background = `linear-gradient(45deg, ${randomColors[0]}, ${randomColors[1]})`;
+    }
+
+    setTimeout(() => {
+      document.querySelector('.final-message div').classList.add('bounce');
+    }, 16000);
+  </script>
+</body>
+</html>
